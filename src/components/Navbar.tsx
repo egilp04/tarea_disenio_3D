@@ -11,9 +11,9 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="pointer-events-auto flex flex-row justify-between border-b-gray-50 bg-gray-950 px-10 py-6">
-      <div className="flex w-full flex-1 items-start">
-        <h1 className="text-shimmer">IES Albarregas</h1>
+    <nav className="pointer-events-auto flex flex-row justify-between border-b border-b-blue-950 bg-gray-950 px-10 py-6">
+      <div className="flex w-full flex-1 items-center">
+        <h1 className="text-shimmer text-2xl">IES Albarregas</h1>
       </div>
       <div className="flex flex-1 flex-row items-center justify-end">
         <NavigationMenu>

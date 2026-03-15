@@ -14,10 +14,10 @@ const Home = () => {
   useEffect(() => {
     const timerCargando = setTimeout(() => {
       setCargando(false)
-    }, 100)
+    }, 300)
     const timerAparecer = setTimeout(() => {
       setAparecer(true)
-    }, 1000)
+    }, 1200)
     return () => {
       clearTimeout(timerCargando)
       clearTimeout(timerAparecer)
@@ -46,7 +46,7 @@ const Home = () => {
       <div className="pointer-events-none absolute inset-0 z-20 flex flex-col">
         <Navbar></Navbar>
         <main
-          className={`flex flex-1 translate-y-0 flex-col items-center justify-center text-blue-50 transition-all duration-1000 ${
+          className={`flex flex-1 translate-y-0 flex-col items-center justify-center text-blue-50 transition-all duration-1300 ${
             aparecer ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >

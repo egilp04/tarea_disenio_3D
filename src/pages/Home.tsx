@@ -18,7 +18,6 @@ const Home = () => {
       <div className="absolute inset-0 z-0">
         <CanvasComponent />
       </div>
-      <div className="absolute inset-0 z-0"></div>
       <div
         className={`pointer-events-none absolute inset-0 z-10 bg-black/65 transition-opacity duration-500 ${
           aparecer ? "opacity-100" : "opacity-0"

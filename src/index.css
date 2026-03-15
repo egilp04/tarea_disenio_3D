@@ -162,24 +162,22 @@
       background-position: 200% center;
     }
   }
-  @layer components {
-    .animate-pulse-soft {
-      animation: pulse-continuous 2s infinite ease-in-out;
-    }
+  .animate-pulse-soft {
+    animation: pulse-continuous 2s infinite ease-in-out;
+  }
 
-    @keyframes pulse-continuous {
-      0% {
-        transform: scale(1);
-        filter: brightness(1);
-      }
-      50% {
-        transform: scale(1.05);
-        filter: brightness(1.2);
-      }
-      100% {
-        transform: scale(1);
-        filter: brightness(1);
-      }
+  @keyframes pulse-continuous {
+    0% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(1);
     }
   }
 }

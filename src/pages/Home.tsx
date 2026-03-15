@@ -5,16 +5,35 @@ import { TooltipProvider } from "../components/ui/tooltip"
 import { Tooltip, TooltipContent } from "../components/ui/tooltip"
 import { TooltipTrigger } from "../components/ui/tooltip"
 import CanvasComponent from "@/components/Canvas"
+import { Spinner } from "../components/ui/spinner"
 
 const Home = () => {
   const [aparecer, setAparecer] = useState(false)
+  const [cargando, setCargando] = useState(true)
+
   useEffect(() => {
-    setTimeout(() => {
+    const timerCargando = setTimeout(() => {
+      setCargando(false)
+    }, 100)
+    const timerAparecer = setTimeout(() => {
       setAparecer(true)
     }, 1000)
+    return () => {
+      clearTimeout(timerCargando)
+      clearTimeout(timerAparecer)
+    }
   }, [])
+
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
+      <div
+        className={`absolute inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-1000 ${
+          cargando ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      >
+        <Spinner />
+      </div>
+
       <div className="absolute inset-0 z-0">
         <CanvasComponent />
       </div>

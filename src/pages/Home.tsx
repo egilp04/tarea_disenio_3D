@@ -31,7 +31,7 @@ const Home = () => {
           cargando ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <Spinner />
+        <Spinner className="text-[#3b82f6]" />
       </div>
 
       <div className="absolute inset-0 z-0">

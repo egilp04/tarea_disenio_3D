@@ -17,7 +17,7 @@ const Home = () => {
     }, 300)
     const timerAparecer = setTimeout(() => {
       setAparecer(true)
-    }, 1200)
+    }, 2000)
     return () => {
       clearTimeout(timerCargando)
       clearTimeout(timerAparecer)
@@ -38,7 +38,7 @@ const Home = () => {
         <CanvasComponent />
       </div>
       <div
-        className={`pointer-events-none absolute inset-0 z-10 bg-black/60 transition-opacity duration-500 ${
+        className={`pointer-events-none absolute inset-0 z-10 bg-black/52 transition-opacity duration-500 ${
           aparecer ? "opacity-100" : "opacity-0"
         }`}
       ></div>
@@ -46,7 +46,7 @@ const Home = () => {
       <div className="pointer-events-none absolute inset-0 z-20 flex flex-col">
         <Navbar></Navbar>
         <main
-          className={`flex flex-1 translate-y-0 flex-col items-center justify-center text-blue-50 transition-all duration-1300 ${
+          className={`flex flex-1 translate-y-0 flex-col items-center justify-center gap-4 text-blue-50 transition-all duration-1300 ${
             aparecer ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
@@ -57,13 +57,14 @@ const Home = () => {
             </span>
           </h2>
           <h3>No solo busques un título, busca un legado</h3>
-          <p className="mb-10 w-200 text-center text-lg font-semibold text-blue-50">
+          <p className="mb-10 flex w-200 flex-col gap-2 text-center text-lg font-semibold text-blue-50">
             Hay lugares donde el tiempo no corre, sino que se acumula. <br />
             Cada mañana, al entrar al centro, el Acueducto de los Milagros nos
             saluda, recordándonos que el trabajo bien hecho puede durar una
-            eternidad. Somos los herederos de la Augusta Emerita, jóvenes que
-            hoy aprenden bajo la sombra de la ingeniería más ambiciosa del
-            Imperio. Sé parte de la historia que aún se está escribiendo.
+            eternidad.
+            <span className="font-bold text-blue-400">
+              Sé parte de la historia que aún se está escribiendo.{" "}
+            </span>
           </p>
 
           <div className="pointer-events-auto flex gap-4">

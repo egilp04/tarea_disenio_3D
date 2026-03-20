@@ -62,8 +62,8 @@ const Home = () => {
             Cada mañana, al entrar al centro, el Acueducto de los Milagros nos
             saluda, recordándonos que el trabajo bien hecho puede durar una
             eternidad.
-            <span className="font-bold text-blue-400">
-              Sé parte de la historia que aún se está escribiendo.{" "}
+            <span className="font-extrabold text-[#3b82f6]">
+              Sé parte de la historia que aún se está escribiendo.
             </span>
           </p>
 

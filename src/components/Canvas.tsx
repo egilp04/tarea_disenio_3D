@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Environment, OrbitControls } from "@react-three/drei"
 import { Suspense } from "react"
-import { Isla } from "../components/ui/Isla"
+import { Isla } from "./ui/Isla"
 
 const CanvasComponent = () => {
   return (
